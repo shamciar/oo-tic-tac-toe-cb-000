@@ -83,6 +83,9 @@ class TicTacToe
 
   def full?
     @counter = 0
+    if draw
+      return false
+    end
     board.each do |take|
       if !position_taken?(counter)
         return false
