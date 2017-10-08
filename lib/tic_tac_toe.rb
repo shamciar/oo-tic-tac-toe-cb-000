@@ -99,7 +99,7 @@ class TicTacToe
       return false
     end
   end
-  
+
   def over?
     if draw?
       return true
@@ -109,7 +109,7 @@ class TicTacToe
       false
     end
   end
-  
+
   def winner
     if won?
       WIN_COMBINATIONS.each do |array|
@@ -124,12 +124,12 @@ class TicTacToe
   end
 
   def play
-  until over?
-    turn
+    until over?
+      turn
+    end
+    if won?
+      puts "Congratulations #{winner}!"
+    elsif draw?
+      puts "Cat's Game!"
+    end
   end
-  if won?
-    puts "Congratulations #{winner}!"
-  elsif draw?
-    puts "Cat's Game!"
-  end
-end
